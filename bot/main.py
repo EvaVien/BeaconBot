@@ -7,7 +7,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Привет! Я здесь, чтобы тебя выслушать.")
 
 def main():
-    token = os.getenv("TOKEN")
+    token = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(token).build()
 
     app.add_handler(CommandHandler("start", start))
